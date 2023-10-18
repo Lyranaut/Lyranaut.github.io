@@ -29,7 +29,7 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 5px;
-    text-align: center;
+    text-align: left; /* Text alignment set to left for these sections */
 }
 
 .projects {
@@ -57,6 +57,7 @@ h1 {
 
 h2 {
     font-size: 24px;
+    text-align: center; /* Center-align the headers inside project tiles */
 }
 
 p {
@@ -75,6 +76,7 @@ a {
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
     margin-top: 15px;
+    text-align: center; /* Center-align the buttons inside project tiles */
 }
 
 a:hover {
