@@ -18,13 +18,66 @@ h1 {
     font-size: 32px;
 }
 
+.about {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.skills {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.languages {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tools {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.experience {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
     min-height: 80vh;
-    gap: 20px; /* Add some spacing between the project tiles */
 }
 
 .project {
@@ -33,7 +86,7 @@ h1 {
     border-radius: 5px;
     padding: 20px;
     width: 300px;
-    min-height: 250px; /* Set a minimum height to ensure consistent tile size */
+    min-height: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -49,7 +102,7 @@ h2 {
 p {
     font-size: 16px;
     color: #555;
-    margin: 10px 0; /* Add some margin below the project description */
+    margin: 10px 0;
 }
 
 a {
