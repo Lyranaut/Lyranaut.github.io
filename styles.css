@@ -30,15 +30,10 @@ experience,
     margin: 20px;
     border-radius: 5px;
     text-align: left;
-}
-
-.about,
-.contact,
-.skills,
-languages,
-tools,
-experience {
-    margin: 10px;
+    /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projects {
@@ -98,12 +93,16 @@ a:hover {
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image {
@@ -137,7 +136,8 @@ a:hover {
     .skills,
     .languages,
     .tools,
-    .experience {
+    .experience,
+    .projects {
         margin: 10px;
     }
 
