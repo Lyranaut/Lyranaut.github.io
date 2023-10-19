@@ -32,6 +32,15 @@ experience,
     text-align: left;
 }
 
+.about,
+.contact,
+.skills,
+languages,
+tools,
+experience {
+    margin: 10px;
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
