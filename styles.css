@@ -37,7 +37,7 @@ experience,
 }
 
 .skills-list {
-    columns: 3;
+    columns: 2;
 }
 
 .project {
@@ -123,8 +123,9 @@ a:hover {
     text-align: center;
 }
 
-.profile-info p {
+.profile-info h3 {
     font-size: 20px;
+    text-align: center;
 }
 
 /* Media query for mobile devices */
@@ -148,7 +149,7 @@ a:hover {
     }
 
     .skills-list {
-        columns: 2;
+        columns: 1;
     }
 
     .project {
@@ -165,7 +166,19 @@ a:hover {
         font-size: 24px;
     }
 
-    .profile-info p {
+    .profile-info h3 {
         font-size: 18px;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        min-height: 80vh;
+    }
+
+    .project {
+        width: calc(50% - 10px);
     }
 }
