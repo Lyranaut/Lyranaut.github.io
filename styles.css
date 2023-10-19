@@ -176,9 +176,18 @@ a:hover {
         columns: 1;
     }
 
+    .projects {
+        display: block;
+    }
+
     .project {
         width: 100%;
         min-height: auto;
+        margin: 10px 0;
+    }
+
+    .project:last-child {
+        margin-bottom: 0;
     }
 
     .project h2 {
