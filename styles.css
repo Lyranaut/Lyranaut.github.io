@@ -97,6 +97,7 @@ a:hover {
     background-color: #555;
 }
 
+/* Add these styles to center the text and image */
 .header-content {
     display: flex;
     align-items: center;
@@ -120,6 +121,10 @@ a:hover {
     object-fit: cover;
     border-radius: 50%;
     display: block;
+}
+
+.profile-info {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
