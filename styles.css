@@ -187,11 +187,13 @@ a:hover {
     }
 
    .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    min-height: 80vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        min-height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .project {
