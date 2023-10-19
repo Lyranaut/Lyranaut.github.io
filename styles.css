@@ -40,6 +40,14 @@ experience,
     columns: 2;
 }
 
+.languages-tools-content ul {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+}
+
 .project {
     background-color: #fff;
     border: 2px solid #333;
@@ -168,6 +176,14 @@ a:hover {
 
     .profile-info h3 {
         font-size: 18px;
+    }
+
+    .languages-tools-content ul {
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        list-style: none;
     }
 
     .projects {
