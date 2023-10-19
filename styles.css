@@ -142,7 +142,7 @@ a:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
-        gap: 10px; /* Меньшие отступы между столбцами */
+        gap: 10px; /* Меньшие отступы между столбцами как в "Tools" */
         justify-content: center;
     }
     
@@ -183,7 +183,7 @@ a:hover {
     .project {
         width: 100%;
         min-height: auto;
-        margin: 10px 0;
+        margin: 20px 0; /* Увеличенные отступы между проектами на телефоне */
     }
 
     .project:last-child {
