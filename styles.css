@@ -52,9 +52,8 @@ experience,
     background-color: #fff;
     border: 2px solid #333;
     border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-    min-height: 250px;
+    padding: 15px; /* Уменьшенный размер блоков */
+    width: 90%; /* Установка ширины блоков на телефоне */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -142,7 +141,7 @@ a:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
-        gap: 10px; /* Меньшие отступы между столбцами как в "Tools" */
+        gap: 10px;
         justify-content: center;
     }
     
@@ -178,12 +177,13 @@ a:hover {
 
     .projects {
         display: block;
+        text-align: center; /* Выравнивание проектов по центру */
     }
 
     .project {
-        width: 100%;
+        width: 90%; /* Установка ширины блоков на телефоне */
         min-height: auto;
-        margin: 20px 0; /* Увеличенные отступы между проектами на телефоне */
+        margin: 10px 0;
     }
 
     .project:last-child {
