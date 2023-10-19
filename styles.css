@@ -97,19 +97,13 @@ a:hover {
     background-color: #555;
 }
 
-/* Add these styles to center the text and image */
-/* Add these styles to center horizontally */
 .header-content {
+    display: flex;
+    align-items: center;
     background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px;
-}
-
-.centered-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .profile-image {
