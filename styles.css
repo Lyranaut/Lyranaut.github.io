@@ -107,10 +107,24 @@ a:hover {
     }
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
 .profile-image {
-            width: 100px; /* Set the desired width */
-            height: 100px; /* Set the desired height */
-            border-radius: 50%; /* Create a circular shape */
-            margin: 10px; /* Add some margin for spacing */
-            position: relative;
-        }
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px; /* Add some margin to separate the image from the text */
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
