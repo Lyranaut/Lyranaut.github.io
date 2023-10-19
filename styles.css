@@ -1,3 +1,4 @@
+/* Common styles for both computer and mobile */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -30,18 +31,13 @@ experience,
     margin: 20px;
     border-radius: 5px;
     text-align: left;
-    /* Center the content horizontally */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    min-height: 80vh;
+.skills-list {
+    columns: 3;
 }
 
 .project {
@@ -106,8 +102,8 @@ a:hover {
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
@@ -121,14 +117,24 @@ a:hover {
     display: block;
 }
 
-.profile-info {
+.profile-info h1 {
+    color: #fff;
+    font-size: 24px;
     text-align: center;
 }
 
+.profile-info p {
+    font-size: 20px;
+}
+
+/* Media query for mobile devices */
 @media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
     h1 {
         font-size: 28px;
-        text-align: center;
     }
 
     .about,
@@ -141,16 +147,25 @@ a:hover {
         margin: 10px;
     }
 
-    .projects {
-        flex-direction: column;
-        align-items: center;
+    .skills-list {
+        columns: 2;
     }
 
     .project {
-        width: 90%;
+        width: 100%;
     }
 
     .profile-image {
+        width: 150px;
+        height: 150px;
         margin-right: 0;
+    }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
+
+    .profile-info p {
+        font-size: 18px;
     }
 }
