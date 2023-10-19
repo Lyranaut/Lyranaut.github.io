@@ -198,3 +198,28 @@ a:hover {
         font-size: 14px;
     }
 }
+
+/* Медиа-запрос для устройств с максимальной шириной 480px (например, телефонов в портретной ориентации) */
+@media (max-width: 480px) {
+    .projects {
+        text-align: center; /* Выравнивание проектов по центру */
+    }
+
+    .project {
+        width: 90%; /* Установка ширины блоков на телефоне */
+        min-height: auto;
+        margin: 10px 0;
+    }
+
+    .project:last-child {
+        margin-bottom: 0;
+    }
+
+    .project h2 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+}
