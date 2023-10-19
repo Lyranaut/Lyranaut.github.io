@@ -20,7 +20,7 @@ h1 {
 .about,
 .contact,
 .skills,
-.languages,
+languages,
 tools,
 experience,
 .projects {
@@ -101,13 +101,13 @@ a:hover {
 
 .centered-content {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
 .profile-image {
-    width: 200px; /* Increased image size */
-    height: 200px; /* Increased image size */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
@@ -125,26 +125,32 @@ a:hover {
     text-align: center;
 }
 
-/* New styling for skills, languages, and tools */
-.skills ul,
-.languages ul,
-.tools ul {
-    text-align: left;
-}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
 
-/* New styling for project layout */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
+    .about,
+    .contact,
+    .skills,
+    .languages,
+    .tools,
+    .experience,
+    .projects {
+        margin: 10px;
+    }
 
-/* New styling for project cards */
-.project {
-    width: 100%; /* Expand to full width of the grid cell */
-}
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Slightly reduce the font size of GitHub Portfolio */
-.profile-info h1:last-child {
-    font-size: 30px; /* Slightly smaller font size */
+    .project {
+        width: 90%;
+    }
+
+    .profile-image {
+        margin-right: 0;
+    }
 }
