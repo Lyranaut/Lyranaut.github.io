@@ -186,14 +186,14 @@ a:hover {
         list-style: none;
     }
 
-    .projects {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        min-height: 80vh;
+   .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 80vh;
     }
-
+    
     .project {
         width: calc(50% - 10px);
     }
