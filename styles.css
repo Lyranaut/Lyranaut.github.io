@@ -1,4 +1,4 @@
-/* Common styles for both computer and mobile */
+/* Общие стили для обоих устройств */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -136,7 +136,23 @@ a:hover {
     text-align: center;
 }
 
-/* Media query for mobile devices */
+/* Медиа-запрос для ноутбуков */
+@media (min-width: 769px) {
+    .projects {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Медиа-запрос для смартфонов */
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -162,41 +178,14 @@ a:hover {
 
     .project {
         width: 100%;
+        min-height: auto;
     }
 
-    .profile-image {
-        width: 150px;
-        height: 150px;
-        margin-right: 0;
+    .project h2 {
+        font-size: 20px;
     }
 
-    .profile-info h1 {
-        font-size: 24px;
-    }
-
-    .profile-info h3 {
-        font-size: 18px;
-    }
-
-    .languages-tools-content ul {
-        background-color: #fff;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        list-style: none;
-    }
-
-   .projects {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        min-height: 80vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .project {
-        width: calc(50% - 10px);
+    .project p {
+        font-size: 14px;
     }
 }
