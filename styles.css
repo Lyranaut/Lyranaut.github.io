@@ -1,4 +1,14 @@
-/* General styles for both devices */
+/* Reset some default browser styles */
+body{
+    margin: 0;
+    padding: 20px;   
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -13,16 +23,36 @@ header {
     padding: 20px;
 }
 
-h1 {
-    font-size: 32px;
-    text-align: center;
+/* Style the profile section */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Shared styles for sections */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+/* Style shared section styles */
 .about,
 .contact,
 .skills,
-languages,
+.languages,
 tools,
 experience,
 .projects {
@@ -33,14 +63,31 @@ experience,
     border-radius: 5px;
     text-align: left;
     display: flex;
-    /* flex-direction: column; Удалите эту строку */
+    flex-direction: column;
     align-items: center;
     line-height: 1.5;
 }
 
 .skills-list {
     columns: 2;
-    margin: 20px 0; /* Добавлен вертикальный отступ */
+    margin: 20px 0; /* Added vertical margin */
+}
+
+/* Make block titles appear at the top and center */
+.about h2,
+.contact h2,
+.skills h2,
+languages h2,
+tools h2,
+experience h2{
+    text-align: center;
+    margin-top: 0; /* Remove top margin for titles */
+}
+
+.projects h2 {
+    text-align: center;
+    margin-top: 0; /* Remove top margin for titles */
+    margin-bottom: 20px;
 }
 
 .project {
@@ -48,11 +95,12 @@ experience,
     border: 2px solid #333;
     border-radius: 5px;
     padding: 15px;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 10px;
+    margin: 10px 0;
     line-height: 1.5;
+    word-wrap: break-word; /* Add this property */
 }
 
 .project-frame {
@@ -60,8 +108,8 @@ experience,
     border: 2px solid #333;
     border-radius: 5px;
     height: 300px;
-    width: 100%;
-    margin: 10px 0;
+    width: 100%; /* Take up the full width */
+    margin: 10px 0; /* Add spacing between project frames */
 }
 
 /* Media query for laptops */
@@ -76,8 +124,8 @@ experience,
 
     .project,
     .project-frame {
-        width: calc(50% - 10px);
-        margin: 0 10px;
+        width: 100%; /* Adjust the width as needed */
+        margin: 0;
     }
 }
 
@@ -87,7 +135,7 @@ experience,
         padding: 10px;
     }
 
-    h1 {
+    h2 {
         font-size: 28px;
     }
 
@@ -109,12 +157,6 @@ experience,
         display: block;
     }
 
-    .project,
-    .project-frame {
-        width: 90%;
-        margin: 10px 0;
-    }
-
     .project:last-child,
     .project-frame:last-child {
         margin-bottom: 0;
@@ -133,5 +175,16 @@ experience,
 .skills-list li,
 languages li,
 tools li {
-    margin: 10px 30px; /* Оставлено только горизонтальное расстояние */
+    margin: 10px 30px; /* Horizontal margin */
+}
+
+.contact-content p,
+.intro p {
+    margin-bottom: 10px; /* You can adjust this value as needed */
+}
+
+
+.intro,
+.contact-content{
+    margin: 20px
 }
