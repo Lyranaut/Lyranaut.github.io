@@ -142,10 +142,17 @@ a:hover {
 /* Media query for laptops */
 @media (min-width: 769px) {
     .projects {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        display: flex;
         justify-content: center;
+    }
+
+    .project {
+        width: calc(50% - 10px);
+        min-height: auto;
+    }
+    
+    .project-frame {
+        display: none;
     }
 }
 
@@ -171,5 +178,36 @@ a:hover {
 
     .skills-list {
         columns: 1;
+    }
+
+    .projects {
+        display: block;
+        text-align: center;
+    }
+
+    .project {
+        width: 90%;
+        min-height: auto;
+        margin: 10px 0;
+    }
+
+    .project-frame {
+        border: 2px solid #000;
+        border-radius: 5px;
+        height: 300px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .project:last-child {
+        margin-bottom: 0;
+    }
+
+    .project h2 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 14px;
     }
 }
