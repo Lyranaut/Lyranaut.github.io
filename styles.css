@@ -20,8 +20,8 @@ h1 {
 
 /* Shared styles for sections */
 .about,
-contact,
-skills,
+.contact,
+.skills,
 languages,
 tools,
 experience,
@@ -47,15 +47,24 @@ experience,
     border: 2px solid #333;
     border-radius: 5px;
     padding: 15px;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 10px;
     line-height: 1.5;
 }
 
+.project.with-hover:hover {
+    transform: scale(1.05);
+}
+
 h2 {
     font-size: 24px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
     text-align: center;
 }
 
@@ -71,7 +80,7 @@ ul {
 }
 
 a {
-    display: inline; /* Updated to inline */
+    display: block;
     text-decoration: none;
     background-color: #333;
     color: #fff;
@@ -79,7 +88,8 @@ a {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    margin-left: 10px; /* Added margin */
+    margin-top: 15px;
+    text-align: center;
 }
 
 a:hover {
@@ -121,24 +131,34 @@ a:hover {
     text-align: center;
 }
 
-.profile-info h3 {
-    font-size: 20px;
-    text-align: center;
+/* New styles for project frames */
+.project-frame {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    height: 300px;
+    width: 100%;
+    margin: 10px 0;
 }
 
 /* Media query for laptops */
 @media (min-width: 769px) {
-    .projects {
-        display: flex;
+    .projects-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 10px;
         justify-content: center;
     }
 
     .project {
         width: calc(50% - 10px);
+        margin: 0 10px;
     }
-    
+
     .project-frame {
-        display: none;
+        display: block;
+        margin: 0 10px;
     }
 }
 
@@ -166,31 +186,27 @@ a:hover {
         columns: 1;
     }
 
-    .projects {
+    .projects-content {
         display: block;
-        text-align: center;
     }
 
-    .project {
+    .project,
+    .project-frame {
         width: 90%;
         margin: 10px 0;
     }
 
-    .project-frame {
-        display: block;
-        border: 2px solid #000;
-        border-radius: 5px;
-        height: 300px;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .project:last-child {
+    .project:last-child,
+    .project-frame:last-child {
         margin-bottom: 0;
     }
 
     .project h2 {
         font-size: 20px;
+    }
+
+    .project h3 {
+        font-size: 18px;
     }
 
     .project p {
