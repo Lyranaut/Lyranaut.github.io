@@ -40,6 +40,7 @@ experience,
 
 .skills-list {
     columns: 2;
+    margin: 20px;
 }
 
 .project {
