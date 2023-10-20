@@ -19,75 +19,27 @@ h1 {
 }
 
 /* Shared styles for sections */
-.with-border {
+.about,
+contact,
+skills,
+languages,
+tools,
+experience,
+projects {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 5px;
     text-align: left;
-}
-
-/* Reset margin and padding for ul in skills-list */
-.skills-list ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Adjustments to center content */
-.with-border {
-    text-align: center;
-}
-
-/* Center contact buttons */
-.contact-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
 }
 
-.contact-button {
-    margin: 5px;
-}
-
-/* Background color for sections */
-.about,
-contact,
-skills,
-languages,
-tools,
-previous-projects {
-    background-color: #fff;
-}
-
-/* Add padding to the 'previous-projects' section */
-.previous-projects {
-    padding: 20px;
-}
-
-/* Style for LinkedIn button */
-.linkedin-button {
-    display: block;
-    text-decoration: none;
-    background-color: #333;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-    margin: 15px auto;
-    text-align: center;
-}
-
-.linkedin-button:hover {
-    background-color: #555;
-}
-
-/* Styles for projects */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    justify-content: center;
+.skills-list {
+    columns: 2;
 }
 
 .project {
@@ -95,8 +47,10 @@ previous-projects {
     border: 2px solid #333;
     border-radius: 5px;
     padding: 15px;
+    width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 10px;
     line-height: 1.5;
 }
 
@@ -137,11 +91,56 @@ a:hover {
     background-color: #555;
 }
 
+.header-content {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-info h1 {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.profile-info h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
 /* Media query for laptops */
 @media (min-width: 769px) {
     .projects {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+        justify-content: center;
     }
+
     .project {
         width: calc(50% - 10px);
         min-height: auto;
@@ -153,31 +152,44 @@ a:hover {
     header {
         padding: 10px;
     }
+
     h1 {
         font-size: 28px;
     }
+
     .about,
     .contact,
     .skills,
     .languages,
     .tools,
-    .previous-projects {
+    .experience,
+    .projects {
         margin: 10px;
     }
-    .projects {
-        grid-template-columns: 1fr;
+
+    .skills-list {
+        columns: 1;
     }
+
+    .projects {
+        display: block;
+        text-align: center;
+    }
+
     .project {
         width: 90%;
         min-height: auto;
         margin: 10px 0;
     }
+
     .project:last-child {
         margin-bottom: 0;
     }
+
     .project h2 {
         font-size: 20px;
     }
+
     .project p {
         font-size: 14px;
     }
@@ -186,19 +198,23 @@ a:hover {
 /* Media query for devices with a maximum width of 480px (e.g., phones in portrait orientation) */
 @media (max-width: 480px) {
     .projects {
-        grid-template-columns: 1fr;
+        text-align: center;
     }
+
     .project {
         width: 90%;
         min-height: auto;
         margin: 10px 0;
     }
+
     .project:last-child {
         margin-bottom: 0;
     }
+
     .project h2 {
         font-size: 20px;
     }
+
     .project p {
         font-size: 14px;
     }
