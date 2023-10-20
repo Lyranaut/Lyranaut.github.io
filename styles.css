@@ -52,7 +52,7 @@ tools,
 experience,
 .projects {
     background-color: #fff;
-    padding: 20px; /* Updated padding to add more space */
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 5px;
@@ -82,21 +82,21 @@ experience h2{
 
 .projects h2 {
     text-align: center;
-    margin-top: 10px; /* Увеличьте значение отступа на свой выбор */
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .project {
     background-color: #fff;
-    border: 2px solid #333; /* Чёрный ободок */
+    border: 2px solid #333;
     border-radius: 5px;
     padding: 15px;
-    width: 100%; /* Занимает всю ширину */
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 20px 0 10px; /* Увеличиваем верхний отступ, чтобы опустить таблицу */
+    margin: 20px 0 10px;
     line-height: 1.5;
-    max-width: 100%; /* Максимальная ширина для изменения размера */
+    max-width: 100%;
 }
 
 .project-frame {
@@ -104,27 +104,57 @@ experience h2{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px; /* Увеличьте высоту фрейма по вашему желанию */
+    height: 400px;
 }
 
 .project img {
     max-width: 100%;
-    max-height: 100%; /* Максимальная высота */
-    border: 2px solid #333; /* Добавим чёрный ободок вокруг изображения */
+    max-height: 100%;
+    border: 2px solid #333;
 }
 
 .project h3 {
     font-size: 20px;
-    margin: 10px;
+    margin: 10px 0;
     white-space: normal;
-    max-width: 100%; /* Максимальная ширина для изменения размера текста */
+    max-width: 100%;
 }
 
 .project p {
     font-size: 16px;
-    margin: 10px;
+    margin: 10px 0;
     white-space: normal;
-    max-width: 100%; /* Максимальная ширина для изменения размера текста */
+    max-width: 100%;
+}
+
+/* Style project links */
+.project a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #0056b3;
+}
+
+/* Style project titles */
+.project h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Style project descriptions */
+.project p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
 }
 
 /* Media query for laptops */
