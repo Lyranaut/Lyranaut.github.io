@@ -128,3 +128,9 @@ experience,
         font-size: 14px;
     }
 }
+
+.skills-list li,
+.languages li,
+.tools li {
+    margin-bottom: 10px;
+}
