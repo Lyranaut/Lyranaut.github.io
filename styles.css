@@ -97,15 +97,6 @@ experience h2{
     margin: 20px 0 10px;
     line-height: 1.5;
     max-width: 100%;
-    display: flex;
-    justify-content: space-between; /* Place project info and image side by side */
-    align-items: center; /* Vertically center the content within the container */
-}
-
-.project-info {
-    width: 50%; /* Adjust as needed */
-    text-align: left; /* Align the text to the left */
-    padding: 10px; /* Add padding to separate text from the image */
 }
 
 .project-frame {
@@ -116,11 +107,7 @@ experience h2{
     height: 400px;
 }
 
-.project-image {
-    width: 50%; /* Adjust as needed */
-}
-
-.project-image img {
+.project img {
     max-width: 100%;
     max-height: 100%;
     border: 2px solid #333;
