@@ -1,19 +1,14 @@
 /* Reset some default browser styles */
-body{
+body {
     margin: 0;
-    padding: 20px;   
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
 }
 
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
 }
 
 header {
@@ -52,12 +47,12 @@ h1, h3 {
 .about,
 .contact,
 .skills,
-.languages,
+languages,
 tools,
 experience,
 .projects {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px; /* Updated padding to add more space */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 5px;
@@ -70,23 +65,24 @@ experience,
 
 .skills-list {
     columns: 2;
-    margin: 20px 0; /* Added vertical margin */
+    margin: 20px 0;
 }
 
 /* Make block titles appear at the top and center */
 .about h2,
-.contact h2,
-.skills h2,
+contact h2,
+skills h2,
 languages h2,
 tools h2,
 experience h2{
     text-align: center;
-    margin-top: 0; /* Remove top margin for titles */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .projects h2 {
     text-align: center;
-    margin-top: 0; /* Remove top margin for titles */
+    margin-top: 10px; /* Увеличьте значение отступа на свой выбор */
     margin-bottom: 20px;
 }
 
@@ -95,12 +91,11 @@ experience h2{
     border: 2px solid #333;
     border-radius: 5px;
     padding: 15px;
-    width: 100%;
+    width: 100%; /* Занимает всю ширину */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0 10px; /* Увеличиваем верхний отступ, чтобы опустить таблицу */
     line-height: 1.5;
-    word-wrap: break-word; /* Add this property */
 }
 
 .project-frame {
@@ -108,8 +103,20 @@ experience h2{
     border: 2px solid #333;
     border-radius: 5px;
     height: 300px;
-    width: 100%; /* Take up the full width */
-    margin: 10px 0; /* Add spacing between project frames */
+    width: 100%; /* Занимает всю ширину */
+    margin: 10px 0; /* Оставляем отступ между рамками проектов */
+}
+
+
+.project h3 {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    margin: 10px;
+    white-space: normal; /* Allow text to wrap */
 }
 
 /* Media query for laptops */
@@ -124,7 +131,7 @@ experience h2{
 
     .project,
     .project-frame {
-        width: 100%; /* Adjust the width as needed */
+        width: 100%;
         margin: 0;
     }
 }
@@ -162,29 +169,27 @@ experience h2{
         margin-bottom: 0;
     }
 
-    .project h2,
     .project h3 {
         font-size: 20px;
     }
 
     .project p {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
 .skills-list li,
 languages li,
 tools li {
-    margin: 10px 30px; /* Horizontal margin */
+    margin: 10px 30px;
 }
 
 .contact-content p,
 .intro p {
-    margin-bottom: 10px; /* You can adjust this value as needed */
+    margin-bottom: 10px;
 }
 
-
 .intro,
-.contact-content{
-    margin: 20px
+.contact-content {
+    margin: 20px;
 }
