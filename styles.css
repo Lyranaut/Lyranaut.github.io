@@ -88,7 +88,7 @@ experience h2{
 
 .project {
     background-color: #fff;
-    border: 2px solid #333;
+    border: 2px solid #333; /* Чёрный ободок */
     border-radius: 5px;
     padding: 15px;
     width: 100%; /* Занимает всю ширину */
@@ -96,27 +96,35 @@ experience h2{
     text-align: center;
     margin: 20px 0 10px; /* Увеличиваем верхний отступ, чтобы опустить таблицу */
     line-height: 1.5;
+    max-width: 100%; /* Максимальная ширина для изменения размера */
 }
 
 .project-frame {
-    background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 5px;
-    height: 300px;
-    width: 100%; /* Занимает всю ширину */
-    margin: 10px 0; /* Оставляем отступ между рамками проектов */
+    background-image: url('gameplay.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; /* Увеличьте высоту фрейма по вашему желанию */
 }
 
+.project img {
+    max-width: 100%;
+    max-height: 100%; /* Максимальная высота */
+    border: 2px solid #333; /* Добавим чёрный ободок вокруг изображения */
+}
 
 .project h3 {
     font-size: 20px;
     margin: 10px;
+    white-space: normal;
+    max-width: 100%; /* Максимальная ширина для изменения размера текста */
 }
 
 .project p {
     font-size: 16px;
     margin: 10px;
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
+    max-width: 100%; /* Максимальная ширина для изменения размера текста */
 }
 
 /* Media query for laptops */
