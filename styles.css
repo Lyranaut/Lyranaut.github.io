@@ -25,7 +25,7 @@ skills,
 languages,
 tools,
 experience,
-projects {
+.projects {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -54,18 +54,6 @@ projects {
     line-height: 1.5;
 }
 
-.project-frame {
-    border: 2px solid #000;
-    border-radius: 5px;
-    height: 300px;
-    width: 100%;
-    margin: 10px;
-}
-
-.project.with-hover:hover {
-    transform: scale(1.05);
-}
-
 h2 {
     font-size: 24px;
     text-align: center;
@@ -83,7 +71,7 @@ ul {
 }
 
 a {
-    display: block;
+    display: inline; /* Updated to inline */
     text-decoration: none;
     background-color: #333;
     color: #fff;
@@ -91,8 +79,7 @@ a {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    margin-top: 15px;
-    text-align: center;
+    margin-left: 10px; /* Added margin */
 }
 
 a:hover {
@@ -148,7 +135,6 @@ a:hover {
 
     .project {
         width: calc(50% - 10px);
-        min-height: auto;
     }
     
     .project-frame {
@@ -187,11 +173,11 @@ a:hover {
 
     .project {
         width: 90%;
-        min-height: auto;
         margin: 10px 0;
     }
 
     .project-frame {
+        display: block;
         border: 2px solid #000;
         border-radius: 5px;
         height: 300px;
