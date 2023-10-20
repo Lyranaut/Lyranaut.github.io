@@ -1,4 +1,4 @@
-/* Общие стили для обоих устройств */
+/* General styles for both devices */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -18,10 +18,11 @@ h1 {
     text-align: center;
 }
 
+/* Shared styles for sections */
 .about,
 .contact,
 .skills,
-languages,
+.languages,
 tools,
 experience,
 .projects {
@@ -34,29 +35,23 @@ experience,
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1.5; /* Added line height */
 }
 
 .skills-list {
     columns: 2;
 }
 
-.languages-tools-content ul {
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    list-style: none;
-}
-
 .project {
     background-color: #fff;
     border: 2px solid #333;
     border-radius: 5px;
-    padding: 15px; /* Уменьшенный размер блоков */
-    width: 90%; /* Установка ширины блоков на телефоне */
+    padding: 15px;
+    width: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 10px;
+    line-height: 1.5; /* Added line height */
 }
 
 .project.with-hover:hover {
@@ -136,7 +131,7 @@ a:hover {
     text-align: center;
 }
 
-/* Медиа-запрос для ноутбуков */
+/* Media query for laptops */
 @media (min-width: 769px) {
     .projects {
         display: grid;
@@ -145,14 +140,14 @@ a:hover {
         gap: 10px;
         justify-content: center;
     }
-    
+
     .project {
         width: calc(50% - 10px);
         min-height: auto;
     }
 }
 
-/* Медиа-запрос для смартфонов */
+/* Media query for smartphones */
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -178,11 +173,11 @@ a:hover {
 
     .projects {
         display: block;
-        text-align: center; /* Выравнивание проектов по центру */
+        text-align: center;
     }
 
     .project {
-        width: 90%; /* Установка ширины блоков на телефоне */
+        width: 90%;
         min-height: auto;
         margin: 10px 0;
     }
@@ -200,14 +195,14 @@ a:hover {
     }
 }
 
-/* Медиа-запрос для устройств с максимальной шириной 480px (например, телефонов в портретной ориентации) */
+/* Media query for devices with a maximum width of 480px (e.g., phones in portrait orientation) */
 @media (max-width: 480px) {
     .projects {
-        text-align: center; /* Выравнивание проектов по центру */
+        text-align: center;
     }
 
     .project {
-        width: 90%; /* Установка ширины блоков на телефоне */
+        width: 90%;
         min-height: auto;
         margin: 10px 0;
     }
@@ -223,8 +218,4 @@ a:hover {
     .project p {
         font-size: 14px;
     }
-}
-
-.skills with-border{
-    line-height: 32px;
 }
