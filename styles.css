@@ -100,12 +100,13 @@ experience h2{
 }
 
 .project-frame {
-    background-image: url('https://github.com/Lyranaut/Lyranaut.github.io/blob/8165c8fd4b4ad9ebbb384c7ff54761ddc0f3d513/gameplay.png');
+    background-image: url('gameplay.png');
     background-size: contain;
-    background-position: center;
+    background-position: right center; /* Выравнивание справа на ноутбуке */
     background-repeat: no-repeat;
-    height: 400px;
+    height: 400px; /* Укажите желаемую высоту */
 }
+
 
 .project img {
     max-width: 100%;
@@ -213,6 +214,11 @@ experience h2{
 
     .project p {
         font-size: 16px;
+    }
+
+	.project-frame {
+        background-position: center bottom; /* Выравнивание снизу на телефоне */
+        height: 200px; /* Укажите желаемую высоту для мобильных устройств */
     }
 }
 
