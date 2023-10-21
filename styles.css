@@ -100,7 +100,7 @@ experience h2{
 }
 
 .project-frame {
-    background-image: url('gameplay.png');
+    background-image: url('https://lh3.googleusercontent.com/pw/ADCreHfmevrNpdufRCPuItHh_fayvjH-LYxxz93n79eVIuBmbNWSq1v7XlQYPBwT9HlV9KCwGjGeWtcLsOyxM805-POrt85k1wvcdY-CEQ3Am5TQDQ_TnwMSg6VNvsrH7djLKbe6UqyGBSuVYaKFCrK5P4qa=w1316-h894-s-no');
     background-size: contain;
     background-position: right center; /* Выравнивание справа на ноутбуке */
     background-repeat: no-repeat;
