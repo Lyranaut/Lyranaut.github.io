@@ -220,6 +220,10 @@ experience h2{
         margin-bottom: 0;
     }
 
+    .project-frame1:last-child {
+        margin-bottom: 0;
+    }
+
     .project h3 {
         font-size: 20px;
     }
@@ -229,6 +233,11 @@ experience h2{
     }
 
 	.project-frame {
+        background-position: center bottom; /* Выравнивание снизу на телефоне */
+        height: 200px; /* Укажите желаемую высоту для мобильных устройств */
+    }
+
+    .project-frame1 {
         background-position: center bottom; /* Выравнивание снизу на телефоне */
         height: 200px; /* Укажите желаемую высоту для мобильных устройств */
     }
