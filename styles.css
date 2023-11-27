@@ -193,6 +193,11 @@ experience h2{
         width: 100%;
         margin: 0;
     }
+
+	.project-frame2 {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 /* Media query for smartphones */
@@ -232,6 +237,10 @@ experience h2{
         margin-bottom: 0;
     }
 
+	.project-frame2:last-child {
+        margin-bottom: 0;
+    }
+
     .project h3 {
         font-size: 20px;
     }
@@ -246,6 +255,11 @@ experience h2{
     }
 
     .project-frame1 {
+        background-position: center bottom; /* Выравнивание снизу на телефоне */
+        height: 200px; /* Укажите желаемую высоту для мобильных устройств */
+    }
+
+	.project-frame2 {
         background-position: center bottom; /* Выравнивание снизу на телефоне */
         height: 200px; /* Укажите желаемую высоту для мобильных устройств */
     }
