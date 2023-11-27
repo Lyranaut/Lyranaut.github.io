@@ -115,6 +115,14 @@ experience h2{
     height: 400px; /* Укажите желаемую высоту */
 }
 
+.project-frame2{
+    background-image: url('footboll2d.png');
+    background-size: contain;
+    background-position: right center; /* Выравнивание справа на ноутбуке */
+    background-repeat: no-repeat;
+    height: 400px; /* Укажите желаемую высоту */
+}
+
 .project img {
     max-width: 100%;
     max-height: 100%;
