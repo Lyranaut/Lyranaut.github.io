@@ -131,6 +131,10 @@ languages h2,
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .project-frame img,
@@ -270,6 +274,31 @@ languages h2,
     .modal-content img {
         max-width: 100%; 
         height: auto;
+    }
+
+    .project-frame,
+    .project-frame1,
+    .project-frame2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1920px) {
+    .project-frame,
+    .project-frame1,
+    .project-frame2 {
+        overflow: hidden;
+    }
+
+    .project-frame img,
+    .project-frame1 img,
+    .project-frame2 img {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid #333;
     }
 }
 
