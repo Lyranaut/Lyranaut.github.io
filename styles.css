@@ -200,6 +200,10 @@ languages h2,
         width: calc(100% - 40px);
         margin: 0;
     }
+
+    .skills-list111111 ul {
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -283,6 +287,10 @@ languages h2,
         justify-content: center;
         align-items: center;
         overflow: hidden;
+    }
+
+    .skills-list111111 ul {
+        margin-bottom: 0;
     }
 }
 
