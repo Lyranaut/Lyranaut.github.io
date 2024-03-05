@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     margin: 0;
     padding: 20px;
@@ -10,6 +11,7 @@ h1, h2, h3, p {
     padding: 0;
 }
 
+/* Стили для заголовка */
 header {
     background-color: #333;
     padding: 20px;
@@ -45,6 +47,7 @@ header {
     object-fit: cover;
 }
 
+/* Стили для блоков с информацией */
 .about,
 .contact,
 .skills,
@@ -62,23 +65,44 @@ header {
     line-height: 1.5;
 }
 
+.contact .contact-info p {
+    margin: 10px;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    font-size: 18px; /* Увеличиваем размер текста */
+}
+
+/* Стили для QR-кода */
 .qr-code img {
     max-width: 250px;
     height: auto;
     justify-content: center;
 }
 
+/* Стили для изображений в списках */
 li img {
     width: 17px;
     height: 17px;
     margin-right: 1px;
 }
 
-.skills-list ul,
-.languages-list ul {
+/* Стили для списков навыков и языков */
+.skills-list ul{
     display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.languages-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -86,15 +110,34 @@ li img {
 .skills-list li,
 .languages-list li {
     margin: 5px;
-    padding: 10px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(50% - 10px);
+    white-space: normal;
 }
 
+.skills-list li:hover {
+    background-color: #333;
+    color: #f9f9f9; 
+}
+
+.skills-list li:hover a {
+    color: #f9f9f9;
+}
+
+/* Стили для блока "Об опыте" */
+.skills-list ul li {
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовков блоков */
 .about h2,
 .contact h2,
 .skills h2,
@@ -105,6 +148,7 @@ languages h2,
     margin-bottom: 20px;
 }
 
+/* Стили для блока с опытом работы */
 .job {
     background-color: #f9f9f9;
     padding: 20px;
@@ -130,6 +174,7 @@ languages h2,
     transition: transform 0.3s ease;
 }
 
+/* Стили для проектов */
 .project {
     background-color: #fff;
     border: 2px solid #333;
@@ -147,6 +192,7 @@ languages h2,
     transform: scale(1.05);
 }
 
+/* Стили для изображений проектов */
 .project-frame,
 .project-frame1,
 .project-frame2 {
@@ -164,7 +210,7 @@ languages h2,
 
 .project-frame img,
 .project-frame1 img,
-.project-frame2 img{
+.project-frame2 img {
     max-width: 100%;
     max-height: 100%;
     border: 2px solid #333;
@@ -180,6 +226,7 @@ languages h2,
     margin: 0 auto;
 }
 
+/* Стили для заголовков проектов */
 .project h3 {
     font-size: 20px;
     margin: 10px 0;
@@ -187,6 +234,7 @@ languages h2,
     max-width: 100%;
 }
 
+/* Стили для описания проектов */
 .project p {
     font-size: 16px;
     margin: 10px 0;
@@ -194,6 +242,7 @@ languages h2,
     max-width: 100%;
 }
 
+/* Стили для ссылок на проекты */
 .project a {
     display: inline-block;
     padding: 10px 20px;
@@ -209,7 +258,9 @@ languages h2,
     background-color: #0056b3;
 }
 
+/* Медиа-запрос для устройств с шириной экрана от 769px */
 @media (min-width: 769px) {
+    /* Стили для контейнера проектов */
     .projects-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -218,6 +269,7 @@ languages h2,
         justify-content: center;
     }
 
+    /* Стили для проектов */
     .project,
     .project-frame,
     .project-frame1,
@@ -227,10 +279,11 @@ languages h2,
         margin: 0 auto;
     }
 
+    /* Стили для списков навыков и языков */
     .skills-list ul,
     .languages-list ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 2fr);
         gap: 20px;
         margin: 20px 0;
     }
@@ -243,19 +296,82 @@ languages h2,
         border-radius: 5px;
         text-align: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        white-space: normal; 
+        white-space: normal;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    /* Стили для контейнера опыта работы */
+    .experience-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Два опыта сверху */
+        gap: 20px;
+    }
+
+    /* Убираем отступ между работами в режиме десктопа */
+    .job {
+        margin-bottom: 0;
+    }
+
+    /* Стили для третьего элемента опыта */
+    .job:nth-child(3) {
+        grid-column: 1 / -1; /* Одному элементу всю ширину сетки */
+        margin-top: 20px; /* Добавляем отступ сверху для разделения от двух опытов сверху */
+        max-width: 50%; /* Устанавливаем максимальную ширину для третьего элемента */
+        margin-left: auto; /* Центрируем третий элемент по горизонтали */
+        margin-right: auto; /* Центрируем третий элемент по горизонтали */
+    }    
+
+    .job:nth-child(3) .job {
+        width: calc(30% - 10px); /* 50% от ширины контейнера */
+    }
+
+    .job:hover {
+        background-color: #333;
+        color: #fff;
+    }    
+
+    .job h3 {
+        color: #333; /* Черный цвет заголовка */
+        transition: color 0.3s; /* Плавное изменение цвета при наведении */
+    }
+    
+    .job:hover h3 {
+        color: #fff; /* Измененный цвет заголовка при наведении */
     }    
 }
 
+/* Медиа-запрос для устройств с шириной экрана от 1920px */
 @media (min-width: 1920px) {
+    /* Устанавливаем максимальную ширину для изображений проектов */
     .project-frame,
     .project-frame1,
     .project-frame2 {
         max-width: 1200px;
         margin: 0 auto;
     }
+
+    /* Стили для контейнера опыта работы */
+    .experience-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Убираем отступ между работами в режиме десктопа */
+    .job {
+        margin-bottom: 0;
+    }
+
+    /* Одна работа занимает оба столбца во второй строке */
+    .job:nth-child(3) {
+        grid-column: 1 / -1;
+    }
 }
 
+/* Стили для списка навыков */
 .skills-list111111 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -263,6 +379,7 @@ languages h2,
     margin: 20px 0;
 }
 
+/* Стили для элементов списка навыков */
 .skills-list111111 p {
     margin-bottom: 10px;
     line-height: 1.5;
@@ -277,7 +394,9 @@ languages h2,
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Медиа-запрос для мобильных устройств с шириной экрана до 768px */
 @media (max-width: 768px) {
+    /* Стили для списка навыков на странице контактов */
     .contact.with-border .skills-list111111 {
         display: flex;
         flex-direction: column;
@@ -290,6 +409,7 @@ languages h2,
         gap: 0;
     }
 
+    /* Стили для профиля */
     .profile {
         flex-direction: column;
         align-items: center;
@@ -319,11 +439,13 @@ languages h2,
         font-size: 16px;
     }
 
+    /* Стили для изображений в модальном окне */
     .modal-content img {
         max-width: 100%; 
         height: auto;
     }
 
+    /* Стили для проектов */
     .project-frame,
     .project-frame1,
     .project-frame2 {
@@ -336,8 +458,40 @@ languages h2,
     .skills-list111111 ul {
         margin-bottom: 0;
     }
+
+    /* Стили для опыта работы */
+    .experience-content {
+        display: block;
+    }
+
+    .job {
+        margin-bottom: 20px;
+    }
+
+    /* Для маленьких экранов */
+    @media (max-width: 768px) {
+        .job {
+            margin-bottom: 20px; /* Добавляем отступ между элементами */
+        }
+    
+        .job:nth-child(3) {
+            margin-top: 0; /* Убираем отступ сверху для третьего опыта */
+        }
+    
+        /* Добавляем стили для изменения фона на мобильных устройствах */
+        .job:hover {
+            background-color: #333 !important;
+            color: #fff!important; /* Цвет фона при наведении */
+        }
+    
+        .job:hover h3 {
+            color: #fff; /* Цвет текста при наведении */
+        }
+    }
+
 }
 
+/* Дополнительные стили для изображений проектов на устройствах с шириной экрана от 1920px */
 @media (min-width: 1920px) {
     .project-frame,
     .project-frame1,
@@ -354,6 +508,7 @@ languages h2,
     }
 }
 
+/* Стили для модального окна */
 .modal {
     display: none;
     position: fixed;
@@ -368,12 +523,17 @@ languages h2,
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15vh auto;
+    margin: auto;
+    margin-top: 15vh;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 800px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content img {
@@ -395,6 +555,7 @@ languages h2,
     cursor: pointer;
 }
 
+/* Стили для кнопки открытия модального окна */
 #openModalBtn {
     background-color: #333; 
     color: #fff;
@@ -410,8 +571,26 @@ languages h2,
     background-color: #555;
 }
 
+/* Стили для кнопки открытия карточки контактов */
 #openContactCardBtn {
     display: block;
     margin-top: 20px; 
     text-align: center;
+}
+
+/* Стили для ссылки на GitHub */
+.github-link {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+}
+
+.project .github-link:hover {
+    background-color: #a4a0a0cd !important;
+    color: #333 !important;
 }
