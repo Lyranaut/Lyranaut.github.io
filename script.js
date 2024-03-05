@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+});
+
 var modal = document.getElementById("contactModal");
 var btn = document.getElementById("openModalBtn");
 var closeBtn = document.getElementsByClassName("close")[0];
