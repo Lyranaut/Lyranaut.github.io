@@ -2,30 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
     <title>Dmytro Doduliak GitHub Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
+
+    <div id="overlay"></div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="Dmytro Doduliak_ Developer.png" alt="Contact Card">
+        </div>
+    </div>
+
     <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <div class="profile">
-                <div class="profile-image">
-                    <a href="https://www.linkedin.com/in/dmytro-doduliak/" target="_blank">
-                        <img src="Profile.jpg" alt="LinkedIn Profile Image">
-                    </a>
-                </div>
-                <div class="profile-info">
-                    <h2>Dmytro Doduliak</h2>
-                    <h3>GitHub Portfolio</h3>
+    <div class="header-content" data-aos="fade-up">
+        <header>
+            <div class="header-content" data-aos="fade-up">
+                <div class="profile">
+                    <div class="profile-image">
+                        <a href="https://www.linkedin.com/in/dmytro-doduliak/" target="_blank">
+                            <img src="Profile.jpg" alt="LinkedIn Profile Image">
+                        </a>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Dmytro Doduliak</h2>
+                        <h3>GitHub Portfolio</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>    
+        </header>    
+    </div>
 
     <!-- About Section -->
-    <section class="about with-border">
+    <section class="about with-border" data-aos="fade-up">
         <h2>About Me</h2>
         <div class="intro">
             <p>Motivated and talented IT and web development professional eager to join your team.</p>
@@ -37,19 +50,13 @@
     </section>
 
     <!-- Contact Information Section -->
-    <section class="contact with-border">
+    <section class="contact with-border" data-aos="fade-up">
         <h2>Contact Information</h2>
         <div class="qr-code">
             <img src="frame.png" alt="QR Code">
         </div>
         
         <button id="openModalBtn">Open Contact Card</button>
-        <div id="contactModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img src="Dmytro Doduliak_ Developer.png" alt="Contact Card">
-            </div>
-        </div>
         <div class="contact-info">
                 <div class="skills-list">
                     <ul style="list-style-type: none;">
@@ -65,7 +72,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills with-border">
+    <section class="skills with-border" data-aos="fade-up">
         <h2>Skills</h2>
         <div class="skills-list">
             <ul style="list-style-type: none;">
@@ -86,21 +93,21 @@
     </section>
 
     <!-- Languages Section -->
-    <section class="skills with-border">
+    <section class="skills with-border" data-aos="fade-up">
         <h2>Languages</h2>
-        <div class="skills-list">
+        <div class="languages-list">
             <ul style="list-style-type: none;">
-                <li>English – B1</li>
-                <li>Spanish – A2</li>
-                <li>French – A2</li>
-                <li>Russian - Native</li>
                 <li>Ukrainian - Native</li>
+                <li>Russian - Native</li>
+                <li>Spanish – A2</li>
+                <li>English – B1</li>
+                <li>French – A2</li>
             </ul>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="skills with-border">
+    <section class="skills with-border" data-aos="fade-up">
         <h2>Experience</h2>
         <div class="experience-content">
             <div class="job">
@@ -140,10 +147,10 @@
     </section>
     
     <!-- Projects Section -->
-    <section class="projects with-border">
+    <section class="projects with-border" data-aos="fade-up">
         <h2>Previous Projects</h2>
         <div class="projects-content">
-            <div class="project">
+            <div class="project" id="project1">
                 <div class="project-frame">
                     <img src="gameplay.png" alt="Rocket Goose Game">
                 </div>
@@ -152,7 +159,7 @@
                 <a href="https://github.com/Lyranaut/Rocket-Goose-Game.git" target="_blank" class="github-link" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 50px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">GitHub Repository</a>
             </div>
             
-            <div class="project">
+            <div class="project" id="project2">
                 <div class="project-frame">
                     <img src="film-finder.png" alt="Film-finder">
                 </div>
@@ -161,7 +168,7 @@
                 <a href="https://lyranaut.github.io/film-finder/" target="_blank" class="github-link" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 50px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">GitHub Repository</a>
             </div>
             
-            <div class="project">
+            <div class="project" id="project3">
                 <div class="project-frame">
                     <img src="Word.png" alt="Word Search In Text Project">
                 </div>
@@ -170,7 +177,7 @@
                 <a href="https://github.com/Lyranaut/Word-Search-In-Text-Project" target="_blank" class="github-link" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 50px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">GitHub Repository</a>
             </div>
             
-            <div class="project">
+            <div class="project" id="project4">
                 <div class="project-frame">
                     <img src="pngtree-gray-network-placeholder-png-image_3416659.png" alt="Delivery Calculator web application on PHP">
                 </div>
@@ -179,7 +186,7 @@
                 <a href="https://github.com/Lyranaut/Delivery-Calculator-web-application-on-PHP" target="_blank" class="github-link" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 50px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">GitHub Repository</a>
             </div>
             
-            <div class="project">
+            <div class="project" id="project5">
                 <div class="project-frame">
                     <img src="pngtree-gray-network-placeholder-png-image_3416659.png" alt="Multi-criteria analysis of project">
                 </div>
@@ -188,7 +195,7 @@
                 <a href="https://github.com/Lyranaut/Multi-criteria-analysis-of-project" target="_blank" class="github-link" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 50px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">GitHub Repository</a>
             </div>
             
-            <div class="project">
+            <div class="project" id="project6">
                 <div class="project-frame">
                     <img src="footboll2d.png" alt="Bouncing Ball with Shadows Alfa">
                 </div>
@@ -200,5 +207,6 @@
     </section>    
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
