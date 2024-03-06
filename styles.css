@@ -549,34 +549,6 @@ li img {
         color: #007BFF; /* Измененный цвет заголовка при наведении */
         transition: background-color 0.3s ease;
     }
-
-    /* Для маленьких экранов */
-    @media (max-width: 768px) {
-        .job {
-            margin-bottom: 20px; /* Добавляем отступ между элементами */
-        }
-    
-        .job:nth-child(3) {
-            margin-top: 0; /* Убираем отступ сверху для третьего опыта */
-        }
-    
-        .job:hover {
-            background-color: #dee2e6; /* Светло-серый */
-            color: #007BFF; /* Насыщенный синий */
-            transition: background-color 0.3s ease;
-        }        
-    
-        .job h3 {
-            color: #333; /* Черный цвет заголовка */
-            transition: color 0.3s; /* Плавное изменение цвета при наведении */
-        }
-        
-        .job:hover h3 {
-            color: #007BFF; /* Измененный цвет заголовка при наведении */
-            transition: background-color 0.3s ease;
-        }
-    }
-
 }
 
 /* Дополнительные стили для изображений проектов на устройствах с шириной экрана от 1920px */
