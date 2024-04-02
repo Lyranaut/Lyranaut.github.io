@@ -40,12 +40,27 @@ header {
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
+    grid-column: span 2;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.flags {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-right: 20px; 
+    margin-left: 20px; 
+    grid-column: span 1;
+}
+
+.flags img {
+    width: 180px; /* Установите желаемую ширину для уменьшенных изображений */
+    height: auto; /* Автоматически подстраивает высоту, сохраняя пропорции */
 }
 
 /* Стили для блоков с информацией */
@@ -137,16 +152,6 @@ li img {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     white-space: normal;
 }
-
-.languages-list li:nth-child(4) {
-    grid-column: span 2; /* Третий элемент занимает две ячейки */
-}
-
-.languages-list li:nth-child(5) {
-    grid-column: span 1; /* Пятый элемент занимает одну ячейку */
-    grid-column-start: 3; /* Начинается с третьей колонки */
-}
-
 
 .skills-list li:hover,
 .languages-list li:hover {
@@ -477,20 +482,37 @@ li img {
 
     /* Стили для профиля */
     .profile {
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .flags {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .flags img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin: 0 5px;
     }
 
     .profile-image {
         width: 80px;
         height: 80px;
-        margin-right: 0;
         margin-bottom: 10px;
     }
 
     .profile-image img {
         width: 100%;
         height: 100%;
+        border-radius: 50%; /* Добавляем закругленные углы для изображения */
     }
 
     .profile-info {
@@ -499,10 +521,12 @@ li img {
 
     .profile-info h2 {
         font-size: 20px;
+        margin-bottom: 5px; /* Уменьшаем отступ снизу для заголовка */
     }
 
     .profile-info h3 {
         font-size: 16px;
+        margin: 0; /* Убираем отступы для подзаголовков */
     }
 
     /* Стили для изображений в модальном окне */
@@ -548,6 +572,19 @@ li img {
     .job:hover h3 {
         color: #007BFF; /* Измененный цвет заголовка при наведении */
         transition: background-color 0.3s ease;
+    }
+
+    .languages-list ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .languages-list li:nth-child(5) {
+        display: none;
+    }
+
+    .skills-list li:nth-child(8) {
+        display: none;
     }
 }
 
