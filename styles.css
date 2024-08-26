@@ -235,9 +235,47 @@ li img {
     transition: transform 0.3s;
 }
 
+/* Скрытие пустых проектов */
+.project:empty {
+    display: none;
+}
+
+/* Убираем рамки и отступы у пустых проектов */
+.project:empty .project-frame {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 .project:hover {
     transform: scale(1.05);
 }
+
+/* Скрыть пустые проекты на экранах до 768px */
+@media (max-width: 768px) {
+    .projects-content .project {
+        display: block;
+    }
+
+    .projects-content .project:empty {
+        display: none;
+    }
+
+    /* Скрытие пустых проектов */
+    .project:empty {
+        display: none;
+    }
+
+    /* Убираем рамки и отступы у пустых проектов */
+    .project:empty .project-frame {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
 
 /* Стили для изображений проектов */
 .project-frame,
@@ -710,3 +748,13 @@ li img {
     color: #333 !important;
     transition: background-color 0.3s ease;
 }
+
+.unstyled-link {
+    display: inline !important; /* Убираем блочное оформление */
+    padding: 0 !important; /* Убираем отступы */
+    background-color: transparent !important; /* Убираем фон */
+    color: blue !important; /* Возвращаем цвет текста */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    border-radius: 0 !important; /* Убираем закругление углов */
+    border: none !important; /* Убираем границы */ 
+  }

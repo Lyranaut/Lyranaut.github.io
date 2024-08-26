@@ -42,3 +42,21 @@ function changeProfession() {
 
 // Вызываем функцию для смены текста
 changeProfession();
+
+function removeEmptyProjects() {
+        const projects = document.querySelectorAll('.project-frame, .project6, .project8');
+        
+        projects.forEach(project => {
+            if (!project.innerHTML.trim()) {
+                project.remove();
+            }
+        });
+    }
+
+    // Выполнение функции при загрузке страницы и изменении размера окна
+    window.addEventListener('DOMContentLoaded', removeEmptyProjects);
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            removeEmptyProjects();
+        }
+    });
